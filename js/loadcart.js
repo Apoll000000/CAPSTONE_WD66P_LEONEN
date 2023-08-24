@@ -105,15 +105,15 @@ function checkout() {
     console.log("Total Amount: " + totalAmount);
 
 
-    // Combine the selectedItems array and the totalObj into a single object
+   
     var checkoutData = {
         "selectedItems": selectedItems,
         "totalAmount": totalAmount
     };
 
-    // Create an AJAX request to send the checkoutData
+   
     $.ajax({
-        url: "php/checkout.php", // Replace with your server-side endpoint URL
+        url: "php/checkout.php", 
         method: "POST",
         data: JSON.stringify(checkoutData),
         contentType: "application/json",

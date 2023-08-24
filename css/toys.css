@@ -11,6 +11,80 @@ body, h1, h2, h3, h4, h5, h6, p{
     padding: 10px 0;
 }
 
+/*foraddtocart*/
+.offcanvas-footer {
+    width: 100%;
+}
+
+.offcanvas-footer button {
+    width: 97%;
+    font-size: 140%;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    border-width: 1px;
+    background-color: #000;
+    color: #fff;
+    padding: 8px;
+}
+
+.product-cart {
+    padding: 3px;
+    display: flex;
+    width: 100%;
+    border: solid rgba(0, 0, 0, 0.048);
+    background-color: #00000010;
+    border-width: 1px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 4px;
+}
+
+.twonone {
+    width: 64%;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.twonone p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.collapseprodqtyy {
+    width: 15%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.cancelled {
+    width: 20%;
+    border: solid rgba(0, 0, 0, 0.089);
+    border-width: 1px;
+    border-radius: 10px;
+}
+
+.collapseimg-holderr {
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+}
+
+.collapseimgg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: solid rgba(0, 0, 0, 0.082);
+    border-width: 1px;
+}
+
 /* Navigation styles */
 
 .cart {
@@ -128,6 +202,11 @@ body, h1, h2, h3, h4, h5, h6, p{
     text-align: center;
 }
 
+.icon-wrapper a {
+    text-decoration: none;
+    color: #000;
+}
+
 
 /* Footer styles */
 footer button {
@@ -235,9 +314,10 @@ footer .footer-creds {
 
 .product-holder {
     width: 100%;
-    height: 55%;
+    height: 100%;
     display: flex;
     overflow: hidden;
+    flex-wrap: wrap;
     gap: 10px;
     margin-left: auto;
     margin-right: auto;
@@ -248,21 +328,30 @@ footer .footer-creds {
 .product img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    object-position: center;
-    z-index: 0;
+    object-fit: fill;
+    object-position: center; 
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .product {
     width: 48%;
-    height: 55%;
     overflow: hidden;
 }
 
-.product .container {
+.product-box {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    max-height: 100%;
     border: solid rgba(0, 0, 0, 0.048);
     border-width: 2px;
+
 }
 
 .product-title {
@@ -283,8 +372,8 @@ footer .footer-creds {
     padding: 9px;
     border: solid rgba(0, 0, 0, 0.048);
     border-width: 2px;
-    border-left-width: 0;
-    border-bottom-width: 0;
+    border-left-width: 2px;
+    border-bottom-width: 2px;
     transition: 800ms;
 }
 
@@ -302,6 +391,10 @@ footer .footer-creds {
 
 .price {
     color: rgb(255, 56, 6);
+}
+
+.offcanvas-body {
+    width: 100%;
 }
 
 /*EXPERIMENTS */
@@ -436,7 +529,7 @@ footer .footer-creds {
     }
 
     .product {
-        width: 17%;
+        width: 15%;
     }
 
     .head img{

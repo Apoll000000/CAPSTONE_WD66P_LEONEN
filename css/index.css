@@ -128,6 +128,11 @@ body, h1, h2, h3, h4, h5, h6, p{
     text-align: center;
 }
 
+.icon-wrapper a {
+    text-decoration: none;
+    color: #000;
+}
+
 
 /* Footer styles */
 footer button {
@@ -267,6 +272,66 @@ footer .footer-creds {
     height: 70px;
 }
 
+/*FORMLOGINANDREGISTER*/
+
+.modal-header {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    border-radius: 0px;
+}
+
+.modal-content {
+    border-radius: 0px;
+}
+
+.modal-header button {
+    color: white;
+    background-color: #000;
+    font-size: larger;
+    border: solid white;
+    border-width: 1px;
+    border-radius: 100%;
+    padding-left: 8px;
+    padding-right: 8px;
+    transition: 300ms;
+}
+
+.modal-header button:hover {
+    background-color: darkorange;
+
+}
+
+.register {
+    color: darkorange;
+    cursor: pointer;
+}
+
+.login {
+    background-color: darkorange;
+    color: #fff;
+    border-radius: 0px;
+    transition: 300ms;
+
+}
+
+.login:hover {
+    background-color: rgb(255, 171, 16);
+    color: #fff;
+}
+
+.register-button {
+    background-color: darkorange;
+    color: #fff;
+    border-radius: 0px;
+    transition: 300ms;
+
+}
+
+.register-button:hover {
+    background-color: rgb(255, 171, 16);
+    color: #fff;
+}
 
 
 /*EXPERIMENTS */
@@ -386,9 +451,10 @@ footer .footer-creds {
 
 .product-holder {
     width: 100%;
-    height: 55%;
+    height: 100%;
     display: flex;
     overflow: hidden;
+    flex-wrap: wrap;
     gap: 10px;
     margin-left: auto;
     margin-right: auto;
@@ -399,21 +465,30 @@ footer .footer-creds {
 .product img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    object-position: center;
-    z-index: 0;
+    object-fit: fill;
+    object-position: center; 
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .product {
     width: 48%;
-    height: 55%;
     overflow: hidden;
 }
 
-.product .container {
+.product-box {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    max-height: 100%;
     border: solid rgba(0, 0, 0, 0.048);
     border-width: 2px;
+
 }
 
 .product-title {
@@ -434,8 +509,8 @@ footer .footer-creds {
     padding: 9px;
     border: solid rgba(0, 0, 0, 0.048);
     border-width: 2px;
-    border-left-width: 0;
-    border-bottom-width: 0;
+    border-left-width: 2px;
+    border-bottom-width: 2px;
     transition: 800ms;
 }
 
@@ -453,6 +528,10 @@ footer .footer-creds {
 
 .price {
     color: rgb(255, 56, 6);
+}
+
+.offcanvas-body {
+    width: 100%;
 }
 
 
@@ -541,6 +620,6 @@ footer .footer-creds {
     }
 
     .product {
-        width: 17%;
+        width: 15%;
     }
 }

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/productViewing.css">
+    <title>Sellaton Homepage</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar small-screen navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand" href="#">SELLATON</a>
+                <div class="top-icons">
+                    <img src="assets/magnifying-glass.png" class="search" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    <img src="assets/shopping-cart.png" class="cart" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                </div>
+                
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"><a class="nav-link" href="women.html">Women</a></li>
+                        <li class="nav-item"><a class="nav-link" href="men.html">Men</a></li>
+                        <li class="nav-item"><a class="nav-link" href="kids.html">Kids</a></li>
+                        <li class="nav-item"><a class="nav-link" href="accessories.html">Accessories</a></li>
+                        <li class="nav-item"><a class="nav-link" href="sports.html">Sports Equipment</a></li>
+                        <li class="nav-item"><a class="nav-link" href="gadgets.html">Electronics/Gadgets</a></li>
+                        <li class="nav-item"><a class="nav-link" href="appliances.html">Appliances</a></li>
+                        <li class="nav-item"><a class="nav-link" href="cosmetics.html">Cosmetics</a></li>
+                        <li class="nav-item"><a class="nav-link" href="toys.html">Toys/Collectibles</a></li>
+                        <li class="nav-item"><a class="nav-link" href="sale.html">Sale</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <nav class="navbar big-screen navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand" href="#">SELLATON</a>
+                
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"><a class="nav-link" href="indexLogged.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="categories.html">Categories</a></li>
+                        <li class="nav-item"><a class="nav-link" href="live.html">Live</a></li>
+                        <li class="nav-item"><a class="nav-link" href="trending.html">Trending</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>  
+                    </ul>
+                </div>
+
+                <div class="top-icons">
+                    <img src="assets/magnifying-glass.png" class="search" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    <a href="user.html"><img class="user" src="assets/user (1).png"></a>
+                    <img src="assets/shopping-cart.png" class="cart" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                </div>
+
+            </div>
+        </nav>
+
+    </header>
+    
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasRightLabel">SHOPPING CART</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <input type="checkbox" id="checkbox" value="1">
+                <div class="product-cart">
+                    <div class="collapseimg-holderr"><img class="collapseimgg" src="assets/eye.png"></div>
+                    <div class="twonone">
+                        <p class="collapseprodnames">asdasdasd</p>
+                        <p class="collapseprodvars">asdasdasd</p>
+                    </div>
+                    <div class="collapseprodqtyy"><p class="price">P25000</p><p>Qty: 5</p></div>
+                    <button class="cancelled">Delete</button>
+                </div>
+            </input>
+        </div>
+        <div class="offcanvas-footer">
+            <button type="button" class="btn-primary" onclick="checkout()" aria-label="Checkout">CHECKOUT</button>
+          </div>
+      </div>
+
+    <div class="collapse search-body" id="collapseExample">
+        <div class="">
+            <h5 class="modal-title" id="searchModalLabel">Search Items</h5>
+            <div class="d-flex align-items-center">
+                <input type="text" class="form-control" placeholder="Type to search...">
+                <button type="button" class="btn btn-primary ms-2">Search</button>
+            </div>
+            
+        </div>
+      </div>
+
+      <div class="modal fade" id="logOutModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              Are you sureyou want to Logout?
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Dismiss</button>
+              <button type="button" class="btn btn-primary">Ok</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal" id="successcartModal">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-body">
+              Product added to cart successfully.
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    <section>
+    
+        <div class="profile">
+                <div class="product-imgView">
+                    <div class="productImg-holder">
+                        <img id="prodimg" class="product-img" src="https://demo-unsen.myshopify.com/cdn/shop/products/Pieces-short-sleeve-sweater_01.jpg?v=1656412749&width=800">
+                    </div>
+                </div>
+
+                <div class="product-info">
+                    <div class="remaining-stocks" style="color: rgba(0, 0, 0, 0.527);">
+                        <p>Stocks:</p> <p class="stock-number">20</p>
+                    </div>
+
+                    <p class="product-name" id="prodname">SGFDGDFGG</p>
+                    <div class="price">PHP <p id="price">1234</p></div>
+                    <div class="product-description">
+                        <p id="describe">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec consectetur odio. Integer quis lacinia elit.
+                            Vestibulum eget ex vitae orci bibendum consectetur.
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec consectetur odio. Integer quis lacinia elit.
+                            Vestibulum eget ex vitae orci bibendum consectetur.
+
+                        </p>
+                    </div>
+                    <button class="show-more-button" onclick="showMore()">See More</button>
+
+                    <div class="variations">
+                        <p><b>VARIATIONS:</b></p>
+                        <div class="scrollable-div">
+                            <div class="variation" onclick="selectVariation(this)" data-variation="variation1">Variation 1</div>
+                            <div class="variation" onclick="selectVariation(this)" data-variation="variation1">Variation 1</div>
+                        </div>
+                    </div>
+
+                    <div class="sizes">
+                        <p><b>SIZES:</b></p>
+                        <div class="scrollable-div">
+                            <div class="size" onclick="selectSize(this)" data-size="sizes1">Variation 1</div>
+                            <div class="size" onclick="selectSize(this)" data-size="sizes2">Variation 1</div>
+                        </div>
+                    </div>
+
+                    <div class="product-buttons">
+                        <div class="number-input">
+                            <button onclick="decrement()">-</button>
+                            <input type="number" id="quantity" value="1">
+                            <button onclick="increment()">+</button>
+                        </div>
+
+                        <button class="add-cart" onclick="addtocart()">ADD TO CART</button>
+
+                    </div>
+                </div>
+
+                
+        </div>
+
+            
+    </section>
+
+    <img id="backToTopBtn" title="Go to top" src="assets/up-arrow.png">
+
+    <footer class="small-screen">
+        <div class="footer-details">
+            <button class="footer-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample">
+            Get in touch
+            </button>
+            <div class="collapse" id="collapseExample1">
+                <div class="card card-body collapseExample1">
+                    <a class="navbar-brand" style="font-size: 150%;" href="#">SELLATON</a>
+                    <p>Sellaton is an exciting contemporary brand which focuses on high-quality products along with an equal opportunity to give users their chance to establish an online market for their products.</p>
+                    <div class="soc-med">
+                        <a href=""><img src="assets/facebook.png"></a>
+                        <a href=""><img src="assets/instagram.png"></a>
+                        <a href=""><img src="assets/twitter.png"></a>
+                    </div>
+                </div>
+            </div>
+
+            <button class="footer-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample">
+                Customer Services
+            </button>
+            <div class="collapse" id="collapseExample2">
+                <div class=" collapseExample2">
+                    <div class="customer-services">
+                        <a href="">FAQs</a>
+                        <a href="">Collections & Delivery</a>
+                        <a href="">Returns & Refund</a>
+                        <a href="">Terms & Condition</a>
+                        <a href="">Delivery Return</a>
+                    </div>
+                </div>
+            </div>
+
+            <button class="footer-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample3" aria-expanded="false" aria-controls="collapseExample">
+                Stay Connected
+            </button>
+            <div class="collapse" id="collapseExample3">
+                <div class="card card-body collapseExample3">
+                    <p>Subscribe to our newsletter and get 10% off your first purchase</p>
+                    <div class="footer-sub">
+                        <input type="email" placeholder="Your email address">
+                        <img src="assets/paper-plane.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p class="footer-creds">&copy; 2023 Sellaton. All rights reserved.</p>
+    </footer>
+
+    <footer class="big-screen">
+        <div class="footer-deets">
+            <div class="rowfoot">
+                <a class="navbar-brand" style="font-size: 150%; color: black;" href="#">SELLATON</a>
+                    <p>Sellaton is an exciting contemporary brand which focuses on high-quality products along with an equal opportunity to give users their chance to establish an online market for their products.</p>
+                    <div class="soc-med">
+                        <a href=""><img src="assets/facebook.png"></a>
+                        <a href=""><img src="assets/instagram.png"></a>
+                        <a href=""><img src="assets/twitter.png"></a>
+                    </div>
+            </div>
+    
+            <div class="rowfoot">
+                <p style="font-size: 150%; color: black;">Customer Services</p>
+                <div class="customer-services">
+                    <a style=" color: rgba(0, 0, 0, 0.692);" href="">FAQs</a>
+                    <a style=" color: rgba(0, 0, 0, 0.692);" href="">Collections & Delivery</a>
+                    <a style=" color: rgba(0, 0, 0, 0.692);" href="">Returns & Refund</a>
+                    <a style=" color: rgba(0, 0, 0, 0.692);" href="">Terms & Condition</a>
+                    <a style=" color: rgba(0, 0, 0, 0.692);" href="">Delivery Return</a>
+                </div>
+            </div>
+    
+            <div class="rowfoot">
+                <p style="font-size: 150%; color: black;">Stay Connected</p>
+                <p>Subscribe to our newsletter and get 10% off your first purchase</p>
+                    <div class="footer-sub">
+                        <input type="email" placeholder="Your email address">
+                        <img src="assets/paper-plane.png">
+                    </div>
+            </div>
+    
+        </div>
+        <p class="footer-creds">&copy; 2023 Sellaton. All rights reserved.</p>
+    </footer>
+
+
+    <section class="phone-icons">
+        <div class="icon-wrapper">
+
+            <a href="indexLogged.html">
+                <div class="icon">
+                    <img class="icon-image" src="assets/home-button.png">
+                    <p>Home</p>
+                </div>
+            </a>
+
+            <a href="categories.html">
+                <div class="icon">
+                    <img class="icon-image" src="assets/list.png">
+                    <p>Menu</p>
+                </div>
+            </a>
+
+            <a href="allproducts.html">
+                <div class="icon">
+                    <img class="icon-image" src="assets/menu.png">
+                    <p>Shop</p>
+                </div>
+            </a>
+
+            <a href="user.html">
+                <div class="icon">
+                    <img class="icon-image" src="assets/user (1).png">
+                    <p>Account</p>
+                </div>
+            </a>
+
+            <a href="wishlist.html">
+                <div class="icon">
+                    <img class="icon-image" src="assets/add-to-favorites.png">
+                    <p>Wishlist</p>
+                </div>
+            </a>
+        </div>
+    </section>
+        
+    <script>
+        
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/functions.js"></script>
+    <script src="js/productviewload.js"></script>
+    <script src="js/loadcart.js"></script>
+</body>
+</html>
